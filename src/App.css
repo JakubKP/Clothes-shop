@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --visibilityAnimation: 72s;
+    --backgroundColorMain: #0f1010;
+    --textColor: #fff;
+    --borderColors: #A86003;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+#root {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Helvetica Neue LT Std', Arial, sans-serif;
+}
+
+#blackBgc {
+    width: 100%;
+    height: 100%;
+    background-color: var(--backgroundColorMain);
+}
+
+#hoodies {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url(./images/hoodie.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 1s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#tees {
+    position: fixed;
+    left: 50%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url(./images/tee.jpg);
+    background-repeat: no-repeat;
+    background-position: -480px;
+    background-size: cover;
+    transition: 1s;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+#middleBox {
+    position: fixed;
+    left: 45%;
+    top: 50%;
+    transform: translateY(50%) rotate(12deg);
+    background-color: white;
+    width: 250px;
+    height: 140%;
+    transition: .5s;
+    visibility: hidden;
+}
+
+.button {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--backgroundColorMain);
+    background-color: #fff;
+    border: 1px solid var(--backgroundColorMain);
+    font-size: 16px;
+    font-weight: 400;
+    padding: 16px 24px;
+    transition: .3s;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+#logo {
+    position: absolute;
+    left: 0;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 250px;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#logo img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-12deg);
+    width: 75%;
+}
+#tees .button {
+    left: 150px;
+    bottom: 20px;
+    padding: 16px 43px;
+}
+
+#hoodies .button {
+    right: 70px;
+    top: 100px;
+}
+
+.button:hover {
+    background-color: rgb(244, 244, 244);
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid rgb(24,24,24, .4);
+    background-color: white;
+    z-index: 999;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 100%;
+    height: calc(100vh - 120px);
+}
+
+ .imagesContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    height: 642px;
+}
+
+.hoodieContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    flex-basis: 25%;
+}
+
+.hoodieContainer img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    height: 642px;
+    width: 100%;
+}
+
+.name-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.names {
+    color: var(--backgroundColorMain);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hoodieimg:hover {
+    opacity: 0;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--backgroundColorMain);
+    color: white;
+}
+
+.rights {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+
+.hoodie-images-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.hoodie-images-container .con,
+.hoodie-images-container .con img  {
+    height: calc(100vh - 80px);
+    width: 100%;
+}
+
+.buy-panel {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    height: calc(100% - 80px);
+    width: 66%;
+}
+
+.info-container { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 60%;
+    width: 50%;
+}
+
+.info-container .details,
+.info-container .description {
+    position: relative;
+    flex-basis: 50%;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,.4);
+}
+
+.name,
+.color,
+.price,
+.sizes,
+.buy-button {
+    position: absolute;
+}
+
+.name {
+    left: 0;
+    top: 0;
+}
+
+.color {
+    left: 0;
+    top: 20px; 
+}
+
+.price {
+    right: 0;
+    top: 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.sizes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    left: 0;
+    bottom: 10px;
+    height: 80px;
+}
+
+.sizes .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--backgroundColorMain);
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-basis: 100%;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.buy-button {
+    bottom: 10px;
+    right: 0;
+    background-color: var(--backgroundColorMain);
+    padding: 15px 80px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    border: 1px solid var(--backgroundColorMain);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.buy-button:hover {
+    background-color: #fff;
+    color: var(--backgroundColorMain);
+}
+
+.about {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    font-size: 10px;
+    font-weight: 100;
+    color: rgba(0,0,0,.4);
+}
+
+.contener {
+    display: flex;
+    flex-direction: column;
+    width: 34%;
+}
+
+.contener-website footer {
+    background-color: var(--backgroundColorMain);
+    height: 60px;
+    width: calc(100vw - 17px);
+    color: white;
+}
+
+.contener-website {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
