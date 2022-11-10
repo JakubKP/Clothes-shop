@@ -200,9 +200,8 @@ html {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 60px;
-    background-color: var(--backgroundColorMain);
-    color: white;
+    height: 50px;
+    border-top: 1px solid rgba(0,0,0,.4);
 }
 
 .rights {
@@ -348,10 +347,9 @@ html {
 }
 
 .contener-website footer {
-    background-color: var(--backgroundColorMain);
     height: 60px;
     width: calc(100vw - 17px);
-    color: white;
+    border-top: 1px solid rgba(0,0,0,.4);
 }
 
 .contener-website {

@@ -18,15 +18,15 @@ const Home = () => {
         const iID2 = setTimeout(() => {
           tees.style.visibility = 'visible';
           tees.style.opacity = '1';
-        }, 2000);
+        }, 1500);
         const iID3 = setTimeout(() => {
           hoodies.style.visibility = 'visible';
           hoodies.style.opacity = '1';
-        }, 3000);
+        }, 2000);
         const iID4 = setTimeout(() => {
           logo.style.opacity = '1';
           logo.style.visibility = 'visible';
-        }, 4000);
+        }, 2500);
 
 
         return () => {
